@@ -18,7 +18,7 @@ class Post(models.Model):
         return f'{self.slug} - {self.updated}'
 
     def get_absolute_url(self):
-        return reverse('posts:post_detail', args=(self.id, self.slug))
+        return reverse('posts:post_details', args=(self.id, self.slug))
 
     def likes_count(self):
         return self.pvotes.count()
